@@ -1,0 +1,42 @@
+.switch-btn{
+    width:80px;
+    height:44px;
+    background-color: grey;
+    position:relative;
+    cursor: pointer;
+    top:25%;
+    left:25%;
+    border-radius: 25px;
+    transition: 0.5s ease-in-out;
+    
+    display: inline-block;
+}
+ .switch-btn::before{
+    content:' ';
+    position: absolute;
+    width:34px;
+    height:34px;
+    background-color:white;
+    box-shadow: 4px 4px 6px 4px rgba(230, 196, 196, 0.3);
+    border-radius: 50%;
+    margin:5px;
+    
+    
+    
+} 
+   input:checked + .switch-btn::before{
+    left:37px;
+    box-shadow: 4px 4px 6px 4px rgba(230, 196, 196, 0.3);
+    transition: 0.5s ease-in-out;
+}  
+ .switch input{
+    opacity: 0;
+    /* display: inline-block; */
+}  
+  input:checked + .switch-btn{
+    background-color:skyblue;
+    transition: 0.5s ease-in-out;
+} 
+.switch input:checked :: .main{
+    background-color: blue;
+}
